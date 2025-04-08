@@ -1,0 +1,6 @@
+.logocontainer{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+    gap: 8px;
+}
