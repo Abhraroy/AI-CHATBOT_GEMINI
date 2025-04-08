@@ -25,6 +25,7 @@ function Login() {
       
     }
   }
+  //@ts-ignore
   useEffect(()=>{
     if(auth?.user){
       return navigate("/chat")

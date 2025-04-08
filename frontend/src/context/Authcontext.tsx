@@ -89,13 +89,13 @@ const [loading, setLoading] = useState(true);
       };
       
 
-    const value = {
-        user,
-        isLoggedin,
-        login,
-        signup,
-        logout
-    }
+    // const value = {
+    //     user,
+    //     isLoggedin,
+    //     login,
+    //     signup,
+    //     logout
+    // }
 
 
 //@ts-ignore

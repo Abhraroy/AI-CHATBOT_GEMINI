@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import React from 'react'
+
 import Typing from '../component/Typer-animation/Typing'
 
 function Home() {

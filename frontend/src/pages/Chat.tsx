@@ -71,6 +71,7 @@ useEffect(() => {
     const chatdata = (await sendChatreq(content)) || "Thinking";
     setchatMessages([...chatdata.chats]);
   };
+  //@ts-ignore
   const handlekey = (e)=>{
     if(e.key=="Enter"){
       handleSubmit()

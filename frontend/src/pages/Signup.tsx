@@ -18,6 +18,7 @@ function Signup() {
     try {
       toast.loading("signing in",{id:"1"})
       const res = await auth?.signup(name,email,password)
+      //@ts-ignore
       if (res) {
         toast.success("Signed up!", { id: "1" });
         navigate("/chat");
