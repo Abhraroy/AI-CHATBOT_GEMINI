@@ -9,4 +9,3 @@ userRoutes.post("/login", validate(loginvalidator), userlogin);
 userRoutes.get("/auth-status", verifyToken, verifyuser);
 userRoutes.get("/logout", verifyToken, userLogout);
 export default userRoutes;
-//# sourceMappingURL=userRoutes.js.map

@@ -7,4 +7,3 @@ chatUser.post("/new", validate(chatvalidator), verifyToken, generatechat);
 chatUser.get("/history", verifyToken, sendChattouser);
 chatUser.delete("/delete", verifyToken, deletechatofuser);
 export default chatUser;
-//# sourceMappingURL=chatRoutes.js.map

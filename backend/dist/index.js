@@ -6,4 +6,3 @@ databaseconnect().then(() => {
         console.log("your server is runing");
     });
 }).catch((err) => console.log(err));
-//# sourceMappingURL=index.js.map

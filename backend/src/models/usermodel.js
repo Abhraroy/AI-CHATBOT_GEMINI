@@ -1,7 +1,10 @@
-import mongoose from "mongoose";
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
-const chatschema = new Schema({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.usermodel = void 0;
+var mongoose_1 = require("mongoose");
+var Schema = mongoose_1.default.Schema;
+var ObjectId = Schema.ObjectId;
+var chatschema = new Schema({
     role: {
         type: String,
         required: true,
@@ -11,7 +14,7 @@ const chatschema = new Schema({
         required: true,
     }
 });
-const user = new Schema({
+var user = new Schema({
     name: {
         type: String,
         required: true,
@@ -27,7 +30,7 @@ const user = new Schema({
     },
     chatofuser: [chatschema]
 });
-export const usermodel = mongoose.model("user", user);
+exports.usermodel = mongoose_1.default.model("user", user);
 // import mongoose from "mongoose";
 // import { randomUUID } from "crypto";
 // const chatSchema = new mongoose.Schema({

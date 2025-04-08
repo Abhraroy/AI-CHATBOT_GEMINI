@@ -16,4 +16,3 @@ export const databasedisconnect = async () => {
         throw new Error("Could not Disconnect from mongo db");
     }
 };
-//# sourceMappingURL=Db_Connection.js.map

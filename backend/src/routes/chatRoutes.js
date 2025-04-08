@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var token_manager_js_1 = require("../utils/token manager.js");
+var validator_js_1 = require("../utils/validator.js");
+var chatcontroller_js_1 = require("../controllers/chatcontroller.js");
+var chatUser = (0, express_1.Router)();
+chatUser.post("/new", (0, validator_js_1.validate)(validator_js_1.chatvalidator), token_manager_js_1.verifyToken, chatcontroller_js_1.generatechat);
+chatUser.get("/history", token_manager_js_1.verifyToken, chatcontroller_js_1.sendChattouser);
+chatUser.delete("/delete", token_manager_js_1.verifyToken, chatcontroller_js_1.deletechatofuser);
+exports.default = chatUser;

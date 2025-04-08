@@ -124,4 +124,3 @@ export const userLogout = async (req, res, next) => {
         return res.status(404).json({ message: "Error", cause: err.message });
     }
 };
-//# sourceMappingURL=userController.js.map

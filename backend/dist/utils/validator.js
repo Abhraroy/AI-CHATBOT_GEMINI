@@ -26,4 +26,3 @@ export const chatvalidator = [
     body("message").notEmpty().withMessage("message is required"),
     // ...loginvalidator,
 ];
-//# sourceMappingURL=validator.js.map

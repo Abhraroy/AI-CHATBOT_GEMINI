@@ -28,4 +28,3 @@ export const verifyToken = async (req, res, next) => {
         });
     });
 };
-//# sourceMappingURL=token%20manager.js.map

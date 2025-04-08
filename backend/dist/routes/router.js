@@ -7,4 +7,3 @@ appRouter.use(express.json());
 appRouter.use("/user", userRoutes);
 appRouter.use("/chat", chatUser);
 export default appRouter;
-//# sourceMappingURL=router.js.map

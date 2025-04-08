@@ -86,4 +86,3 @@ export const deletechatofuser = async (req, res, next) => {
         return res.status(404).json({ message: "Error", cause: err.message });
     }
 };
-//# sourceMappingURL=chatcontroller.js.map
