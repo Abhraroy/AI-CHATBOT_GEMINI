@@ -30,6 +30,7 @@ export const usersignup = async (req, res, next) => {
             httpOnly: true,
             signed: true,
             path: "/",
+            sameSite: "None",
         });
         const token = tokenmanager(user._id.toString(), user.email);
         const expires = new Date();
@@ -39,6 +40,7 @@ export const usersignup = async (req, res, next) => {
             expires,
             httpOnly: true,
             signed: true,
+            sameSite: "None",
         });
         return res.status(201).json({ message: "Ok", name: user.name, email: user.email });
     }
@@ -61,7 +63,7 @@ export const userlogin = async (req, res, next) => {
         }
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-
+            sameSite: "None",
             signed: true,
             path: "/",
         });
@@ -70,7 +72,7 @@ export const userlogin = async (req, res, next) => {
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
-
+            sameSite: "None",
             expires,
             httpOnly: true,
             signed: true,
@@ -113,6 +115,7 @@ export const userLogout = async (req, res, next) => {
             httpOnly: true,
             signed: true,
             path: "/",
+            sameSite: "None",
         });
         return res.status(200).json({ message: "Logged out successfully" });
     }
