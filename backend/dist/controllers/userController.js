@@ -31,6 +31,7 @@ export const usersignup = async (req, res, next) => {
             signed: true,
             path: "/",
             sameSite: "None",
+            secure:true
         });
         const token = tokenmanager(user._id.toString(), user.email);
         const expires = new Date();
@@ -41,6 +42,7 @@ export const usersignup = async (req, res, next) => {
             httpOnly: true,
             signed: true,
             sameSite: "None",
+            secure:true
         });
         return res.status(201).json({ message: "Ok", name: user.name, email: user.email });
     }
@@ -66,6 +68,7 @@ export const userlogin = async (req, res, next) => {
             sameSite: "None",
             signed: true,
             path: "/",
+            secure:true
         });
         const token = tokenmanager(existinguser._id.toString(), existinguser.email);
         const expires = new Date();
@@ -76,6 +79,7 @@ export const userlogin = async (req, res, next) => {
             expires,
             httpOnly: true,
             signed: true,
+            secure:true
         });
         return res.status(200).json({ message: "Ok", name: existinguser.name, email: existinguser.email });
     }
@@ -116,6 +120,7 @@ export const userLogout = async (req, res, next) => {
             signed: true,
             path: "/",
             sameSite: "None",
+            secure:true
         });
         return res.status(200).json({ message: "Logged out successfully" });
     }
